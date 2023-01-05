@@ -29,3 +29,21 @@ export const PostsContainer = styled.div`
   grid-template-columns: repeat(auto-fill, minmax(19rem, 1fr));
   gap: 2rem;
 `
+
+export const PostsEmpty = styled.div`
+  margin-top: 3rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  h2 {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: ${(props) => props.theme['base-subtitle']};
+  }
+
+  span {
+    font-size: 0.875rem;
+    color: ${(props) => props.theme['base-span']};
+  }
+`

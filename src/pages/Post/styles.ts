@@ -1,34 +1,12 @@
 import styled from 'styled-components'
 
-export const ProfileContainer = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 2rem;
+export const PostContainer = styled.div``
+
+export const PostHeader = styled.div`
   border-radius: 10px;
   padding: 2rem;
   background: ${(props) => props.theme['base-profile']};
-`
-
-export const ProfileAvatar = styled.div`
-  border-radius: 8px;
-  width: 9.25rem;
-
-  img {
-    display: block;
-    max-width: 100%;
-    border-radius: 8px;
-    aspect-ratio: 1 / 1;
-  }
-`
-
-export const ProfileContent = styled.div``
-
-export const NameContainer = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  margin-bottom: 0.5rem;
+  box-shadow: 0px 2px 28px rgba(0, 0, 0, 0.2);
 
   h1 {
     font-size: 1.5rem;
@@ -36,6 +14,14 @@ export const NameContainer = styled.div`
     line-height: 130%;
     color: ${(props) => props.theme['base-title']};
   }
+`
+
+export const ControllersContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 1.25rem;
 
   a {
     display: flex;
@@ -63,7 +49,7 @@ export const DetailsContainer = styled.div`
   align-items: center;
   gap: 1.5rem;
 
-  margin-top: 1.5rem;
+  margin-top: 0.5rem;
 
   span {
     display: flex;
@@ -76,4 +62,11 @@ export const DetailsContainer = styled.div`
       color: ${(props) => props.theme['base-subtitle']};
     }
   }
+`
+
+export const PostContent = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 2.5rem 2rem;
 `

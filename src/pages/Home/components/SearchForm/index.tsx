@@ -1,12 +1,18 @@
 import { ChangeEvent } from 'react'
 import { SearchFormContainer } from './styles'
 
-export function SearchForm() {
-  async function handleSearchTransactions(event: ChangeEvent) {}
+interface SearchFormProps {
+  onChangeValue: (query: string) => void
+}
+
+export function SearchForm({ onChangeValue }: SearchFormProps) {
+  async function handleSearch(event: ChangeEvent<HTMLInputElement>) {
+    onChangeValue(event.target.value)
+  }
 
   return (
     <SearchFormContainer
-      onChange={handleSearchTransactions}
+      onChange={handleSearch}
       type="text"
       placeholder="Busque por transações"
     />

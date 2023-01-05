@@ -32,7 +32,7 @@ async function fetchPosts(key: string) {
   const query = key.replace(/^posts\//, '')
 
   const { data } = await api.get<{ items: Post[] }>(
-    `/search/issues?q=${query}%20repo:natasha-m-oliveira/github-blog`,
+    `/search/issues?q=${query}%20is:issue%20repo:natasha-m-oliveira/github-blog&type=issues`,
   )
 
   return data.items.map((post): Post => {

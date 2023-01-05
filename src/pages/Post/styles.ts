@@ -48,6 +48,7 @@ export const DetailsContainer = styled.div`
   display: flex;
   align-items: center;
   gap: 1.5rem;
+  flex-wrap: wrap;
 
   margin-top: 0.5rem;
 

@@ -4,10 +4,15 @@ export const ProfileContainer = styled.div`
   display: flex;
   align-items: center;
   gap: 2rem;
+
   border-radius: 10px;
   padding: 2rem;
   background: ${(props) => props.theme['base-profile']};
   box-shadow: 0px 2px 28px rgba(0, 0, 0, 0.2);
+
+  @media (max-width: 640px) {
+    flex-direction: column;
+  }
 `
 
 export const ProfileAvatar = styled.div`
@@ -63,6 +68,7 @@ export const DetailsContainer = styled.div`
   display: flex;
   align-items: center;
   gap: 1.5rem;
+  flex-wrap: wrap;
 
   margin-top: 1.5rem;
 

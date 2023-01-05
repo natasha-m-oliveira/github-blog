@@ -9,10 +9,11 @@ export const CardContainer = styled.div`
   padding: 2rem;
   background: ${(props) => props.theme['base-post']};
   cursor: pointer;
-  border: 2px solid transparent;
+  border: 2px solid ${(props) => props.theme['base-post']};
+  transition: border-color 150ms cubic-bezier(0.4, 0, 0.2, 1);
 
-  :hover {
-    border: 2px solid ${(props) => props.theme['base-label']};
+  &:hover {
+    border-color: ${(props) => props.theme['base-label']};
   }
 `
 
